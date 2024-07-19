@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import "./StopWatchComponent.css"
 function StopWatchComponent() {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -34,6 +34,7 @@ function StopWatchComponent() {
 
   return (
     <div className="stopwatch">
+    <div>
       <h1>Stopwatch</h1>
       <div className="timer">{formattedTime}</div>
       <div className="buttons">
@@ -44,6 +45,7 @@ function StopWatchComponent() {
           Stop
         </button>
         <button onClick={handleReset}>Reset</button>
+      </div>
       </div>
     </div>
   );
